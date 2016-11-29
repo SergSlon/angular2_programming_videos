@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <nav>
+    <a>Navigation:</a>
+    <ul>
+      <li><a [routerLink]="['channels']">Channels</a></li>
+      <li><a [routerLink]="['videos']">Videos</a></li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

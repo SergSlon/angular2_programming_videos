@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ChannelComponent } from './channel.component';
+import { ChannelItemComponent } from './channel-item.component';
 
-describe('ChannelComponent', () => {
-  let component: ChannelComponent;
-  let fixture: ComponentFixture<ChannelComponent>;
+describe('ChannelItemComponent', () => {
+  let component: ChannelItemComponent;
+  let fixture: ComponentFixture<ChannelItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChannelComponent ]
+      declarations: [ ChannelItemComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChannelComponent);
+    fixture = TestBed.createComponent(ChannelItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
