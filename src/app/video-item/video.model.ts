@@ -1,7 +1,7 @@
 /**
- * Provides a `Channel` object
+ * Provides a `Video` object
  */
-export class Channel{
+export class Video{
     constructor(
         public id: Number,
         public title: String,
