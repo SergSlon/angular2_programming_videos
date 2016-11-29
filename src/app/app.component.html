@@ -1,11 +1,31 @@
-<div>
-  <nav>
-    <a>Navigation:</a>
-    <ul>
-      <li><a [routerLink]="['channels']">Channels</a></li>
-      <li><a [routerLink]="['videos']">Videos</a></li>
-    </ul>
-  </nav>
+<nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+  <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation"></button>
+  <a class="navbar-brand" href="#">Programming video</a>
+  <div id="navbar">
+    <nav class="nav navbar-nav float-xs-left">
+      <!--<a class="nav-item nav-link" [routerLink]="['channels']">Channels</a>-->
+      <!--<a class="nav-item nav-link" [routerLink]="['videos']">Videos</a>-->
+    </nav>
+    <!--<form class="float-xs-right">-->
+      <!--<input type="text" class="form-control" placeholder="Search...">-->
+    <!--</form>-->
+  </div>
+</nav>
 
-  <router-outlet></router-outlet>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <app-channel-list></app-channel-list>
+    </div>
+
+    <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
+      <div class="row placeholders">
+        <router-outlet></router-outlet>
+
+        <!--<div class="col-xs-6 col-sm-3 placeholder"></div>-->
+        <!--<div class="col-xs-6 col-sm-3 placeholder"></div>-->
+      </div>
+    </div>
+  </div>
 </div>
+
