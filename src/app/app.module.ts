@@ -15,6 +15,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ChannelItemComponent } from './channel-item/channel-item.component';
 import { HomeComponent } from './home/home.component';
 
+import { youTubeServiceInjectables } from './you-tube-service/you-tube.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    youTubeServiceInjectables
   ],
   bootstrap: [AppComponent]
 })
