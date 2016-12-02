@@ -51,7 +51,7 @@ export class YouTubeService {
     let params: string = [
       `id=${channelId}`,
       `key=${this.apiKey}`,
-      `part=snippet`,
+      `part=snippet,id`,
       `maxResults=1`
     ].join('&');
 
@@ -59,7 +59,7 @@ export class YouTubeService {
 
     if (!this.cache[channelId]['info']) {
       this.cache[channelId]['info'] = this.http.get(queryUrl)
-        .map((response: Response) => response.json().items[0].snippet)
+        .map((response: Response) => response.json().items[0])
         .toPromise()
       ;
     }

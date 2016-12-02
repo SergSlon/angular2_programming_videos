@@ -16,6 +16,7 @@ import { ChannelItemComponent } from './channel-item/channel-item.component';
 import { HomeComponent } from './home/home.component';
 
 import { youTubeServiceInjectables } from './you-tube-service/you-tube.service'
+import { YoutubeSafeUrlPipe } from "./youtube-safe-url.pipe";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { youTubeServiceInjectables } from './you-tube-service/you-tube.service'
     ChannelListComponent,
     PageNotFoundComponent,
     ChannelItemComponent,
-    HomeComponent
+    HomeComponent,
+    YoutubeSafeUrlPipe
   ],
   imports: [
     BrowserModule,
